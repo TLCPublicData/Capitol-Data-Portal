@@ -1,0 +1,8 @@
+{% set placeholder = _('Ex: 2011 Elections') %}
+
+<form class="module-content search-form" method="get" action="{% url_for controller='package', action='search' %}">
+  <input id="field-main-search" type="text" class="form-control col-md-6 offset-md-2 col-sm-12 offset-sm-0" style="margin-right: 5px;" name="q" value="" autocomplete="off" placeholder="{% block search_placeholder %}{{ placeholder }}{% endblock %}" />
+  <button class="btn btn-primary col-md-2">
+    <input id value="Search" type="submit" style="color:white; border:none; background-image: none; background-color: transparent; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; margin-bottom: 0px;">
+  </button>
+</form>

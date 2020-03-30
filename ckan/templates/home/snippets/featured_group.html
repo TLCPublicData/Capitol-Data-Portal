@@ -1,0 +1,11 @@
+{% set groups = h.get_featured_groups() %}
+
+{% for group in groups %} 
+  {% if loop.index0 % 3 == 0 %}
+    <div class="row row2">
+  {% endif %}
+      {% snippet 'snippets/group_item.html', group=group, truncate=50, truncate_title=35 %}
+  {% if loop.index0 % 3 == 2 %}
+    </div>
+  {% endif %}
+{% endfor %}

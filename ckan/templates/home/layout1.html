@@ -1,0 +1,37 @@
+<style>
+.site-footer {
+  background: #eeeeee url("../../../base/images/bg.png");
+  background-color: #fff!important;
+}
+
+.site-footer a {
+  color: #112e51;
+}
+
+hr {
+  border-top: 1px solid #112e51;
+}
+
+.site-footer h4 {
+  color: #112e51;
+}
+
+body {
+  background: #eeeeee url("../../../base/images/bg.png");
+  background-color: #fff!important;
+}
+</style>
+<section class="section" id="search-section">
+  <div class="container">
+    {% block search %}
+      {% snippet 'home/snippets/search.html' %}
+    {% endblock %}
+  </div>
+</section>
+<div role="main" style="background-color: #fff;">
+  <div class="container">
+    {% block featured_group %}
+      {% snippet 'home/snippets/featured_group.html' %}
+    {% endblock %}
+  </div>
+</div>

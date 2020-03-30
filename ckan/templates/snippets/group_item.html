@@ -1,0 +1,14 @@
+{% block group_item %}
+  <div class="col-md-4 col-sm-12">
+    <a href="{{ h.url_for(controller='group', action='read', id=group.name) }}">
+      <div class="card card-home">
+        <div class="card-block py-1">
+          <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}" class="my-3 mx-auto d-block" style="max-width: 150px;" />
+          <div class="card-header" id="heading">
+            <h3 class="card-title my-0 text-center">{{ (group.title or group.name).upper() }}</h3>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+{% endblock %}

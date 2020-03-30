@@ -1,0 +1,16 @@
+<section class="section" id="search-section">
+  <div class="container">
+    {% block search %}
+      {% snippet 'home/snippets/search.html' %}
+    {% endblock %}
+  </div>
+</section>
+<div role="main" style="background-color: #fff;">
+  <div class="container">
+    <div class="row row2">
+      {% block featured_group %}
+        {% snippet 'home/snippets/featured_group.html' %}
+      {% endblock %}
+    </div>
+  </div>
+</div>
